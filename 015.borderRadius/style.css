@@ -1,0 +1,8 @@
+#test {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(253, 229, 122, 0.89);
+  border: 2px solid rgb(180, 123, 1);
+  margin: 30px;
+  border-radius: 20px;
+}

@@ -1,0 +1,23 @@
+#my-slide {
+  width: 284px;
+  height: 322px;
+  border: 3px solid black;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#one, #two {
+  width: 284px;
+  height: 322px;
+  position: absolute;
+  overflow: hidden;
+}
+
+#one {
+  background: yellow;
+}
+
+#two {
+  background: blue;
+}
