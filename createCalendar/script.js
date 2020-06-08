@@ -6,23 +6,11 @@ let monthInput = document.getElementById('date-month');
 let button = document.getElementById('create-calendar');
 
 
-function createCalendarHead() {
-  let headRow = document.createElement('tr');
-  let days = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
-
-  for (let day of days) {
-    headRow.innerHTML += '<th>' + day + '</th>';
-  }
-  
-  return headRow;
-}
-
-
 button.onclick = function (event, elem = container, year = yearInput.value, month = monthInput.value) {
   container.innerHTML = "";
 
   let table = document.createElement('table');
-  table.append(createCalendarHead());
+  table.innerHTML = "<tr><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr>";
 
   let startTDCount = 0;
   let daysCount = 1;
@@ -33,6 +21,7 @@ button.onclick = function (event, elem = container, year = yearInput.value, mont
 
   //create rows
   for (let i = 0; i < 6; i++) { 
+    // don't create row if it's the next month
     if (date.getMonth() != month) continue;
 
     let row = document.createElement('tr');
