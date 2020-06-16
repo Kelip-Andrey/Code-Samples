@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.notification {
+  position: fixed;
+  color: yellow;
+  background-color: #b80000;
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 40px;
+  z-index: 1000;
+}
